@@ -9,7 +9,7 @@ from streamlit_autorefresh import st_autorefresh
 @st.cache_data(ttl=30)  # cache for 30 seconds
 def get_vix_data():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # show browser for debug
+        browser = p.chromium.launch(headless=True)  # show browser for debug
         page = browser.new_page()
 
         page.set_extra_http_headers({
