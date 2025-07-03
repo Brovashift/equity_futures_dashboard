@@ -1,5 +1,8 @@
 import streamlit as st
 import traceback
+import subprocess
+subprocess.run(["playwright", "install"], check=True)
+
 from playwright.sync_api import sync_playwright
 from streamlit_autorefresh import st_autorefresh
 
